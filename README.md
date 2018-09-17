@@ -9,3 +9,6 @@ loading1
 
 loading2
 <img src="./loading2/loading2.gif" width=200 />
+
+loading3
+<img src="./loading3/loading3.gif" width=200 />
