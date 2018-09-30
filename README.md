@@ -12,3 +12,6 @@ loading2
 
 loading3
 <img src="./loading3/loading3.gif" width=200 />
+
+loading4
+<img src="./loading4/loading4.gif" width=200 />

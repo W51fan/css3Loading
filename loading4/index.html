@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>146-loader</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+<script>
+    const COUNT = 360 / 12;
+
+    d3.select('.loader')
+        .selectAll('span')
+        .data(d3.range(COUNT).map(d => d + 1))
+        .enter()
+        .append('span')
+        .style('background-color', (d) => d % 2 !== 0 ?
+            `hsl(${d * 12}, 100%, 65%)` :
+            'black');
+
+    let animation = new TimelineMax({
+        repeat: -1
+    });
+    animation.staggerFrom('.loader span', 1, {
+        scaleX: 0
+    }, 1)
+</script>
+
+</html>
